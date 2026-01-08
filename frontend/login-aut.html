@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P.E.P.P.E.R. - Finding HOPE/authority/login</title>
+  <link rel="icon" href="image copy.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="login-card">
+    <div class="logo-img"></div>
+    <p class="subtitle">Sign in to continue<br>
+         <h2 id="aut-login-show">Authorized Access Only</h2><i class="fa-solid fa-lock"></i></p>
+
+    <form>
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
+
+      <button type="submit" class="btn primary">Login</button>
+      <button type="button" class="btn secondary" id="signupBtn">Sign Up</button>
+    </form>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="consent-modal" id="consentModal">
+    <h3>Terms & Conditions — Authorized Authorities</h3>
+
+    <div class="terms-box">
+
+      <h2>1. Authorized Access Only</h2>
+      <p>
+        Access to P.E.P.P.E.R’s authority panel is strictly limited to verified government agencies,
+        law enforcement bodies, disaster management authorities, and approved partner organizations.
+        Credentials are non-transferable.
+      </p>
+
+      <h2>2. Purpose-Bound Usage</h2>
+      <p>
+        The platform shall be used only for official purposes such as locating missing persons,
+        disaster response, or lawful investigations. Any personal, political, or unauthorized use
+        is strictly prohibited.
+      </p>
+
+      <h2>3. Human Verification Mandate</h2>
+      <p>
+        All AI-generated matches, signals, or similarity scores are assistive outputs only.
+        Final identification, confirmation, and action must be performed by authorized human officials.
+      </p>
+
+      <h2>4. Data Confidentiality & Handling</h2>
+      <p>
+        All accessed data is confidential and classified. Authorities must ensure secure handling,
+        storage, and usage of data in compliance with applicable data protection and privacy laws.
+      </p>
+
+      <h2>5. No Automated Decision-Making</h2>
+      <p>
+        P.E.P.P.E.R does not provide automated decisions. Any operational or legal decision taken
+        based on system output lies entirely with the authorized authority.
+      </p>
+
+      <h2>6. Audit & Logging</h2>
+      <p>
+        All actions performed within the authority interface are logged, timestamped, and auditable.
+        Activity logs may be reviewed for compliance, security, and accountability.
+      </p>
+
+      <h2>7. Accountability & Liability</h2>
+      <p>
+        Authorized entities are solely responsible for outcomes resulting from the use or misuse
+        of the platform. P.E.P.P.E.R shall not be held liable for actions taken by authorities.
+      </p>
+
+      <h2>8. Access Suspension & Revocation</h2>
+      <p>
+        P.E.P.P.E.R reserves the right to suspend or revoke authority access in cases of misuse,
+        policy violation, security risk, or legal non-compliance.
+      </p>
+
+      <h2>9. Legal & Ethical Compliance</h2>
+      <p>
+        Authorities must operate within local, national, and international laws,
+        including human rights, privacy, and data protection regulations.
+      </p>
+
+      <h2>10. System Integrity</h2>
+      <p>
+        Any attempt to tamper with system logs, bypass safeguards, extract unauthorized data,
+        or reverse-engineer the platform will result in immediate access termination
+        and potential legal action.
+      </p>
+
+      <div class="note">
+        By accessing the P.E.P.P.E.R authority interface, you confirm that you are a verified
+        official user and agree to comply with these Terms & Conditions.
+      </div>
+
+    </div>
+
+    <label class="checkbox">
+      <input type="checkbox" id="consentCheck">
+      I acknowledge and agree to the Terms & Conditions
+    </label>
+
+    <button class="btn submit" id="submitBtn" disabled>Proceed</button>
+  </div>
+
+  <script src="login-auth.js"></script>
+</body>
+</html>

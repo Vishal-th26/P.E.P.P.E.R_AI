@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>P.E.P.P.E.R | Report Missing Person</title>
+
+  <link rel="stylesheet" href="user-dashboard.css">
+   <link rel="icon" href="image copy.png">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
+  />
+</head>
+
+<body>
+
+  <div class="dashboard">
+    <h1>P.E.P.P.E.R</h1>
+    <p class="subtitle">Submit a Missing Person Report</p>
+
+    <form id="reportForm">
+
+      <!-- IMAGE UPLOAD -->
+      <div class="section">
+        <h3>Upload Images </h3>
+        <p class="hint">(Minimum 3)</p>
+        <input type="file" id="images" accept="image/*" multiple required />
+        <span id="imageError" class="error"></span>
+      </div>
+
+      <!-- REFERENCE IMAGE (OPTION A) -->
+      <div class="section">
+        <h3>Reference Image (Upload image again)</h3>
+        <p class="hint">
+          This image will be shown only to authorized authorities for visual
+          verification. It will not be used for AI matching.
+        </p>
+        <input type="file" id="referenceImage" accept="image/*" />
+      </div>
+
+      <!-- BASIC INFORMATION -->
+      <div class="section">
+        <h3>Basic Information</h3>
+
+        <input type="text" placeholder="Full Name" id="name" required />
+
+        <!-- AGE RANGE -->
+        <div style="display:flex; gap:10px;">
+          <input type="number" id="min_age" placeholder="Min Age" required />
+          <input type="number" id="max_age" placeholder="Max Age" required />
+        </div>
+
+        <select id="gender" required>
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <input
+          type="text"
+          placeholder="Last Known Location"
+          id="location"
+          required
+        />
+
+        <p>Emergency contact number</p>
+        <input
+          type="tel"
+          id="mobile-number"
+          placeholder="Enter contact number"
+          required
+        />
+      </div>
+
+      <!-- CONSENT -->
+      <div class="section">
+        <label style="display:flex; gap:8px; align-items:flex-start;">
+          <input type="checkbox" id="consentCheck" required />
+          <span>
+            I confirm that I have consent to submit this report.
+            <br />
+            <small>
+              If a reference image is provided, I consent to it being shown to
+              authorized authorities strictly for identification assistance.
+            </small>
+          </span>
+        </label>
+      </div>
+
+      <button type="submit" id="submitBtn">Submit Report</button>
+
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+  <script src="user-dashboard.js"></script>
+
+</body>
+</html>

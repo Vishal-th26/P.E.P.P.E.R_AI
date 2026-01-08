@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+body {
+  min-height: 100vh;
+   background: url("background.png");
+     background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard {
+  width: 920px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border-radius: 16px;
+   border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 25px 60px rgba(0, 23, 127, 0.25);
+  height: 80vh;
+}
+
+h1 {
+  text-align: center;
+  color: #0b1640;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+
+.image-section {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.image-box {
+  flex: 1;
+  border: 2px dashed #c9d4ff;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.image-box h3 {
+  margin-bottom: 0.6rem;
+}
+
+.image-box img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: none;
+}
+
+.db-placeholder {
+  font-size: 13px;
+  color: #777;
+  margin-top: 20px;
+}
+
+.confidence-box {
+  padding: 12px;
+  background: #f5f7ff;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.details {
+  display: none;
+  margin-bottom: 1.5rem;
+}
+
+.details p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+#confirmBtn{
+     width: 100%;
+  padding: 14px;
+  margin-top: 12rem;
+  border: none;
+  border-radius: 10px;
+  background: #4367ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+#confirmBtn:hover{
+  transform: scale(1.005);
+ box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  background: #002fff;
+}
+#denyBtn{
+      width: 100%;
+  padding: 14px;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 10px;
+  background: #4367ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+#denyBtn:hover
+{ transform: scale(1.005);
+ box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  background: #002fff;
+
+
+}

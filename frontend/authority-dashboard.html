@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>P.E.P.P.E.R | Authority Dashboard</title>
+   <link rel="icon" href="image copy.png">
+  <link rel="stylesheet" href="authority-dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+  <h1>P.E.P.P.E.R</h1>
+  <p class="subtitle">Authority Image Verification Panel</p>
+
+  <!-- IMAGE COMPARISON -->
+  <div class="image-section">
+
+    <div class="image-box">
+      <h3>Authority Provided Image</h3>
+      <input type="file" id="authorityImage" accept="image/*">
+      <img id="authorityPreview">
+    </div>
+
+    <div id="dbimg"     class="image-box">
+      <h3>Database Image</h3>
+      <div class="placeholder" id="dbPlaceholder">
+        No records available
+      </div>
+      <img id="dbImage" src="">
+    </div>
+
+  </div>
+
+  <!-- IMAGE MATCH INFO -->
+  <div class="match-info" id="matchInfo">
+    <p><strong>Confidence Score:</strong> <span id="confidence"></span></p>
+    <p><strong>Image Notes:</strong> <span id="imageNotes"></span></p>
+  </div>
+
+  <!-- PERSON DETAILS -->
+  <div class="details" id="details">
+    <h3>Person Information</h3>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Age:</strong> <span id="age"></span></p>
+    <p><strong>Gender:</strong> <span id="gender"></span></p>
+    <p><strong>Contact:</strong> <span id="contact"></span></p>
+    <p><strong>Last Known Location:</strong> <span id="location"></span></p>
+  </div>
+  <div id="referenceBox" style="display: none; margin-top: 16px;">
+  <h3>Family Provided Reference Image</h3>
+
+  <img
+    id="referenceImage"
+    src=""
+    alt="Reference image"
+    style="
+      max-width: 280px;
+      border-radius: 12px;
+      margin-top: 10px;
+      display: block;
+    "
+  />
+
+  <p style="font-size: 13px; color: #444; margin-top: 8px;">
+    This image was submitted with consent and is shown only for
+    visual verification by an authorized authority.
+  </p>
+</div>
+
+  <button
+    id="showRefBtn"
+    type="button"
+    style="
+      display: none;
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: none;
+      background: #ffffff;
+      color: #333;
+      cursor: pointer;
+      font-weight: 600;
+    "
+  >
+    Show reference image
+  </button>
+
+  <!-- ACTIONS -->
+  <div class="actions">
+    <button id="confirmBtn" disabled class="confirm">Confirm Identity</button>
+    <button id="denyBtn" disabled class="deny">Deny Identity</button>
+  </div>
+
+</div>
+
+<script src="authority-dashboard.js"></script>
+</body>
+</html>

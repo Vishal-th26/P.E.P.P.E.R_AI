@@ -1,0 +1,179 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* 🔧 ONLY CHANGE: background moved to body */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  background-image: url("background-img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-card {
+  width: 320px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(32px);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0, 23, 127, 01);
+  text-align: center;
+ 
+  
+}
+
+.logo-img{
+  color: #162266;
+  font-weight: bold;
+  text-decoration: underline;
+  background-image: url("logo-img.png");
+  background-size:cover ;
+  height:10vh;
+  border-radius: 25px;
+}
+
+.subtitle{
+  font-size: medium;
+  font-weight: 500;
+  text-align: center;
+  color:#000000;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+input{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 0px;
+  margin-bottom: 2rem;
+}
+
+.btn{
+  width: 100%;
+  padding: 0.2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font: bold;
+  color: #000;
+  margin-bottom: 2rem;
+  font-size: medium;
+  font-weight: 600;
+  transition: background-color 0.10s ease-in;
+}
+.primary{
+  background-color: #162266;
+  color: #fff;
+}
+.primary:hover{
+  background-color: #f1e4d1;
+
+    color: #000000;
+}
+
+/* Your existing button */
+.secondary {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.secondary:hover {
+  background-color: #D0E6FD;
+  color: #000000;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+/* Modal */
+.consent-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  padding: 1.5rem;
+  background: #ffffff;
+  color: #000;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transform: translate(-50%, -50%) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 101;
+}
+
+.consent-modal h3 {
+  margin-bottom: 0.5rem;
+}
+
+.consent-modal p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+/* Submit button */
+.submit {
+  width: 100%;
+  padding: 0.6rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submit:enabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* ACTIVE STATES */
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.consent-modal.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%) scale(1);
+}
+.terms-box {
+  max-height: 300px;       /* adjust as you like */
+  overflow-y: auto;
+  padding-right: 10px;
+}
+#aut-login-show{
+  font-weight: 800;
+  color: #000000;
+}

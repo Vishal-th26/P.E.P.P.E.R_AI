@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ================= SECTION 1 (UNCHANGED) ================= */
+
+.section1 {
+  background-image: url("background-img.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+   backdrop-filter:blur(100%);
+   
+}
+
+.user-manual {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(3px);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.slider-viewport {
+  width: 70rem;
+  overflow: hidden;
+}
+
+.cards {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.4s ease;
+}
+
+.card {
+  height: 40rem;
+  width: 70rem;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 45px;    
+  overflow: hidden;        
+  
+  flex-shrink: 0;
+}
+
+
+.nav {
+  font-size: 15rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= SECTION 2 (PROFESSIONAL) ================= */
+
+.section2 {
+  background-color: #f5f7fa;
+   background-image: url("background-img.png");
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0;
+}
+
+.info-container {
+  width: 75%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section2 h1 {
+  font-size: 2.8rem;
+  color: #0b1640;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.info-block {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border-left: 6px solid #0b1640;
+}
+
+.info-block h2 {
+  color: #0b1640;
+  margin-bottom: 1rem;
+}
+
+.info-block p,
+.info-block li {
+  color: #444;
+  line-height: 1.7;
+  font-size: 1rem;
+  
+}
+
+.info-block ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.note {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.emphasis {
+  border-left: 6px solid #0b1640;
+}
+.social-links{
+  color: rgb(0, 0, 91);
+  transition: 0.45s;
+   
+  
+
+}
+.social-link{
+  margin-left: 12rem;
+  font-size:xx-large;
+  transition: 0.45s; transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+}
+.social-link:hover{
+  transform: scale(2.08) translateY(-10px) ease-in;
+  box-shadow: 2 20px 40px rgba(0,0,0,0.25);
+  color: black;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+#landing{
+  background-image: url("landing-get-help.png");
+
+  object-fit: cover;
+  height:40rem;
+  width: 70rem;
+
+}
+#login-page{
+    background-image: url("login-get-help.png");
+
+  object-fit: cover;
+  height:40rem;
+  width: 70rem;
+
+}
+#user-dash{
+    background-image: url("user-dash-get-help.png");
+
+  object-fit: cover;
+  height:40rem;
+  width: 70rem;
+}
+#lastmesg{
+    background-image: url("image.png");
+
+  object-fit: cover;
+  height:40rem;
+  width: 70rem;
+}

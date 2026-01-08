@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+env/
+.venv/
+
+# Environment variables
+.env
+
+# Uploaded / reference data
+reference_images/
+data.csv
+
+# OS files
+.DS_Store

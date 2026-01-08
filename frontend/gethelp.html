@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="image copy.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P.E.P.P.E.R. - Finding HOPE / Get Help</title>
+  <link rel="icon" href="image copy.png">
+  <link rel="stylesheet" href="gethelp.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<section class="section1">
+  <div class="user-manual">
+    <h1>How to Use PEPPER</h1>
+
+    <div class="slider-wrapper">
+      <button class="nav" onclick="slideLeft()">‹</button>
+
+      <div class="slider-viewport">
+        <div class="cards" id="cardTrack">
+          <div id="landing" class="card"></div>
+          <div id="login-page" class="card"></div>
+          <div id="user-dash" class="card"></div>
+          <div id="lastmesg" class="card"></div>
+        </div>
+      </div>
+
+      <button class="nav" onclick="slideRight()">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 2 (UPDATED) ================= -->
+
+<section class="section2">
+  <div class="info-container">
+
+    <h1>Get Help with P.E.P.P.E.R</h1>
+
+    <p class="lead">
+      P.E.P.P.E.R is a secure, human-assisted platform designed to help locate missing individuals
+      by responsibly connecting citizens with authorized authorities.
+    </p>
+
+    <div class="info-block">
+      <h2>What is P.E.P.P.E.R?</h2>
+      <p>
+        P.E.P.P.E.R (Personal Embedded People Profiling & Enhanced Recognition) is an assistance system,
+        not a decision-making authority. It uses AI-based facial recognition solely to support
+        investigations under human supervision.
+      </p>
+      <p>
+        The system never confirms identities independently. All potential matches are reviewed,
+        verified, and acted upon by authorized officials only.
+      </p>
+    </div>
+
+    <div class="info-block">
+      <h2>How P.E.P.P.E.R Helps Citizens</h2>
+      <ul>
+        <li>Submit missing person reports in a secure and structured manner</li>
+        <li>Upload images or information without accessing any sensitive databases</li>
+        <li>Maintain privacy and anonymity where required</li>
+        <li>Enable faster communication with responsible authorities</li>
+      </ul>
+      <p class="note">
+        Citizens can only submit information. They cannot view, retrieve, or modify any records.
+      </p>
+    </div>
+
+    <div class="info-block">
+      <h2>How P.E.P.P.E.R Supports Authorities</h2>
+      <ul>
+        <li>AI-assisted face matching to reduce investigation time</li>
+        <li>Restricted access limited to verified organizations</li>
+        <li>Audit logs to ensure transparency and accountability</li>
+        <li>Human validation at every critical decision point</li>
+      </ul>
+    </div>
+
+    <div class="info-block emphasis">
+      <h2>Ethical & Legal Commitment</h2>
+      <p>
+        P.E.P.P.E.R is built with a strict ethical framework. It does not automate legal decisions,
+        does not replace human judgment, and does not permit unrestricted access to sensitive data.
+      </p>
+      <p>
+        Technology assists. Humans decide.
+      </p>
+    </div>
+
+    <div class="info-block emphasis">
+      <div class="social-links">
+  <div class="social-links reveal">
+    <a href="" class="social-link"><i class="fab fa-instagram"></i></a>
+  <a href="" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://youtube.com/@peppriq?si=riTorzkznpY1x71a" class="social-link"><i class="fab fa-youtube"></i></a>
+  <a href="" class="social-link"><i class="fab fa-twitter"></i></a>
+</div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JS (UNCHANGED) ================= -->
+
+<script>
+  let index = 0;
+  const track = document.getElementById("cardTrack");
+  const cards = Array.from(track.children);
+
+  function getGap() {
+    const style = getComputedStyle(track);
+    return parseFloat(style.gap) || 0;
+  }
+
+  function getOffset(index) {
+    const gap = getGap();
+    let offset = 0;
+    for (let i = 0; i < index; i++) {
+      offset += cards[i].offsetWidth + gap;
+    }
+    return offset;
+  }
+
+  function slideRight() {
+    if (index < cards.length - 1) {
+      index++;
+      update();
+    }
+  }
+
+  function slideLeft() {
+    if (index > 0) {
+      index--;
+      update();
+    }
+  }
+
+  function update() {
+    track.style.transform = `translateX(-${getOffset(index)}px)`;
+  }
+
+  window.addEventListener("load", update);
+</script>
+
+</body>
+</html>
