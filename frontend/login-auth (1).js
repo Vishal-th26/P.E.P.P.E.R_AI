@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const endpoint =
       authMode === "signup"
-        ? "http://127.0.0.1:8000/authority/signup"
-        : "http://127.0.0.1:8000/authority/login";
+        ? "http://20.193.151.214:8000/authority/signup"
+        : "http://20.193.151.214:8000/authority/login";
 
     try {
       const response = await fetch(endpoint, {

@@ -26,7 +26,7 @@ let showRefBtn = document.getElementById("showRefBtn");
 let currentMatchId = null;
 let currentRefImageUrl = null;
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://20.193.151.214:8000";
 
 // ===== ENSURE BUTTON EXISTS =====
 (function ensureShowRefButton() {

@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const MIN_IMAGES = 3;
   const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024;
   const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp"];
-  const UPLOAD_URL = "http://127.0.0.1:8000/register-missing-person";
+  const UPLOAD_URL = "http://20.193.151.214:8000/register-missing-person";
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
