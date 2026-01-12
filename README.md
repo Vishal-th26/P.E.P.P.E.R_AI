@@ -25,7 +25,7 @@ The system is built to support real-world deployment scenarios where **accuracy,
 
 * **Framework:** FastAPI (Python 3.11)
 * **Face Recognition:** ArcFace
-* **Similarity Metric:** Cosine Similarity
+* **Similarity Metric:** Cosine Similarity plus adaptive threshold
 * **Embeddings:** 512-dimensional vector representations
 * **ORM:** SQLAlchemy
 
@@ -38,16 +38,12 @@ The system is built to support real-world deployment scenarios where **accuracy,
 ### Database
 
 * **PostgreSQL**
-* Stores embeddings, metadata, and access-controlled records
+* Stores embeddings in vector database, metadata, and access-controlled records
 
 ### Cloud & Infrastructure
 
-* **Microsoft Azure**
-
   * Virtual Machine (backend execution)
   * Azure PostgreSQL Flexible Server
-  * Blob Storage (planned for secure image storage)
-
 ---
 
 ## Architecture
@@ -102,6 +98,11 @@ The system is built to support real-world deployment scenarios where **accuracy,
 * Ready for demo and further deployment
 
 ---
+
+// NOTE: Backend endpoints are restricted in public demo.
+// Full functionality is demonstrated in the demo video.
+const API_BASE_URL = "http://20.193.151.214:8000"
+For api testing.
 
 ## Disclaimer
 
